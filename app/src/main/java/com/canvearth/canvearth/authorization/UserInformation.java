@@ -63,7 +63,7 @@ public class UserInformation {
     }
 
     public String getToken() throws TimeoutException, InterruptedException {
-        if (Configs.TESTING) {
+        if (Configs.TESTING || Configs.DEBUG) {
             return "TEST_USER_TOKEN";
         }
         tokenApplyLatch.await();
